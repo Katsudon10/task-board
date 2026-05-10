@@ -16,7 +16,11 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+
+## 自力実装とレビュー
+
+一人で実装しつつ画面単位でレビューを受けるときの**第1画面の目安**と**レビュー依頼テンプレート**は [docs/implementation-and-review.md](docs/implementation-and-review.md) を参照してください。
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
