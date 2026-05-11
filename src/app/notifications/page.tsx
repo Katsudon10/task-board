@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { TopBar } from "@/components/ui/design-system";
+import { requireSession } from "@/lib/auth/require-session";
 
 export const metadata: Metadata = {
   title: "通知 | タスク管理アプリ",
@@ -28,7 +29,9 @@ const notifications = [
   },
 ];
 
-export default function NotificationsPage() {
+export default async function NotificationsPage() {
+  await requireSession("/notifications");
+
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
       <TopBar

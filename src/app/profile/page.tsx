@@ -6,13 +6,16 @@ import {
   DesignButton,
   FieldBox,
 } from "@/components/ui/design-system";
+import { requireSession } from "@/lib/auth/require-session";
 
 export const metadata: Metadata = {
   title: "プロフィール設定 | タスク管理アプリ",
   description: "TaskBoard のプロフィール設定",
 };
 
-export default function ProfilePage() {
+export default async function ProfilePage() {
+  await requireSession("/profile");
+
   return (
     <CenteredCard className="max-w-[480px]">
       <div className="flex flex-col gap-5">
